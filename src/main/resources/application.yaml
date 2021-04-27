@@ -1,5 +1,5 @@
 amazon:
   credentials:
-    accessKey: "AKIAZEUEU2JQACWEEN3R"
-    secretKey: "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"
+    accessKey: ${accessKey}
+    secretKey: ${secretKey}
     region: "us-east-2"
