@@ -16,21 +16,28 @@ class AmazonRekognitionFactory(
     @Value("\${amazon.credentials.region}") private val awsRegion: String
 ) {
 
+    private var amazonRekognition: AmazonRekognition? = null
+
     fun create(): AmazonRekognition {
-        val clientConfig = ClientConfiguration()
-        clientConfig.connectionTimeout = 30000
-        clientConfig.requestTimeout = 60000
-        clientConfig.protocol = Protocol.HTTPS
+        return when {
+            amazonRekognition != null -> amazonRekognition!!
+            else -> {
+                val clientConfig = ClientConfiguration()
+                clientConfig.connectionTimeout = 30000
+                clientConfig.requestTimeout = 60000
+                clientConfig.protocol = Protocol.HTTPS
 
-        val staticCredentials = AWSStaticCredentialsProvider(
-            BasicAWSCredentials(awsAccessKey, awsSecretKey)
-        )
+                val staticCredentials = AWSStaticCredentialsProvider(
+                    BasicAWSCredentials(awsAccessKey, awsSecretKey)
+                )
 
-        return AmazonRekognitionClientBuilder
-            .standard()
-            .withClientConfiguration(clientConfig)
-            .withCredentials(staticCredentials)
-            .withRegion(awsRegion)
-            .build()
+                AmazonRekognitionClientBuilder
+                    .standard()
+                    .withClientConfiguration(clientConfig)
+                    .withCredentials(staticCredentials)
+                    .withRegion(awsRegion)
+                    .build()
+            }
+        }
     }
 }

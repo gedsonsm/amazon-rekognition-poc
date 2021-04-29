@@ -59,6 +59,13 @@
             <version>${aws.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-core</artifactId>
+            <version>1.5.0-RC</version>
+            <type>pom</type>
+        </dependency>
+
     </dependencies>
 
     <build>
