@@ -11,13 +11,13 @@
 * Fill the "application.yml" file with IAM accessKey and secretKey data
 
 ### How to run
-# Compare Faces
+#### Compare Faces
 * URL http://localhost:8080/compareFaces
     - parameters:
         * imageSource
         * imageTarget
     
-# Photo of a photo verification
+#### Photo of a photo verification
 * URL http://localhost:8080/checkPhoto
     - parameters:
       * image
