@@ -8,7 +8,7 @@
 #### **Requirements:**
 * Create an AWS account: https://aws.amazon.com/pt/
 * Configure a IAM User: https://docs.aws.amazon.com/rekognition/latest/dg/setup-awscli-sdk.html
-* Fill the "application.yml" file with IAM accessKey and secretKey data
+* Fill the "application.yml" file with IAM accessKey and secretKey data **(Note: do not commit this change)**
 
 ### How to run
 #### Compare Faces

@@ -12,7 +12,7 @@
     <artifactId>amazon-rekognition-poc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>amazon-rekognition-poc</name>
-    <description>Amazom Rekognition POC</description>
+    <description>Amazon Rekognition POC</description>
     <properties>
         <java.version>11</java.version>
         <kotlin.version>1.4.32</kotlin.version>

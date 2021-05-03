@@ -96,10 +96,7 @@ class RekognitionService(
     companion object {
         private const val SIMILARITY_THRESHOLD = 70f
 
-        private const val MAX_FILE_SIZE = 1_048_576;
-
         private val LABELS: List<String> = listOf(
-            "Selfie",
             "Phone",
             "Electronics",
             "Mobile Phone",
@@ -112,7 +109,6 @@ class RekognitionService(
             "Television",
             "LCD Screen",
             "Pc",
-            "Cinema",
             "Tablet Computer"
         )
     }
